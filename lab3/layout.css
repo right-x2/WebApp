@@ -1,0 +1,52 @@
+.nomal{
+	border: 5px solid;
+
+}
+.red{
+	text-align: right;
+	border-color: red;
+	border: 0px;
+	background-color: #1D2475;
+	color: white;
+}
+.orange{
+	font-size: 14pt;
+	color: #CCCCCC;
+	border:0px;
+}
+.blue{
+	overflow: hidden;
+	margin-top: 10px;
+	padding: 5px;
+	border: #1D2475 solid 4px;
+	border-radius: 15px;
+	background-color: #99CCFF;
+}
+.green{
+	position: relative;
+	border: solid white 10px;
+	background-color: white;
+}
+.purple{
+	border: 0px ;
+	border-bottom: blue dashed 2px;
+}
+.overall{
+	margin-left: 10%;
+	margin-right: 10%;
+	background-image: url("./blueTextureBG.jpg");
+	position: relative;
+}
+img.headericon{
+	float: right;
+}
+.link{
+	width: 150px;
+	background-color: #3366CC;
+	margin-right: 10px;
+	float: left;
+	position: fixed;
+}
+.overhidden{
+	overflow: hidden;
+}

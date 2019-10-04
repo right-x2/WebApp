@@ -12,21 +12,30 @@ dt{
 strong{
 	color:#FFF86B;
 }
-q{
+blockquote{
 	color:#D1DFEB;
-	align-content: left;
 }
 a{
 	color:#FF4F4F;
+	text-decoration: none;
 }
 dl{
 	font-size: 70%;
-	align-content: left;
 }
 dt{
 	font-weight: bold;
 }
 #top{
 	font-size:40pt;
-	text-shadow: 5px -4px gray;
+	text-shadow: 3px -3px green;
 }
+ol, ul, blockquote{
+	text-align: left;
+}
+table, td ,th{
+	border: dotted;
+}
+table{
+	border-collapse: collapse;
+}
+ul{list-style-type: square;}
