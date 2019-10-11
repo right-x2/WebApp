@@ -44,8 +44,8 @@ img.headericon{
 	width: 150px;
 	background-color: #3366CC;
 	margin-right: 10px;
+	margin-bottom: 500px;
 	float: left;
-	position: fixed;
 }
 .overhidden{
 	overflow: hidden;
