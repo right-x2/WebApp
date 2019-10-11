@@ -1,0 +1,66 @@
+.mainbg{
+	background-image: url(./background.png);
+	font-size: 8pt;
+	font-family:Verdana; 
+}
+#banner{
+	height: 50px;
+	background-image: url(./bannerbg.png);
+}
+#rebanner{
+	padding-left: 550px;
+}
+.headert{
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Verdana;
+	text-shadow: 3px 3px  #999999;
+	text-align: center;
+}
+.contents{
+	overflow: hidden;
+	border: 4px solid gray;
+	border-radius: 20px;
+	width: 800px;
+	margin-left: 400px;
+}
+.topbanner{
+	background-image: url(./rbg.png);
+	height: 84px;
+	color: red;
+	font-weight: bold ;
+	vertical-align: bottom;
+	font-size: 48px;
+	overflow: hidden;
+}
+.mainphoto{
+	float: right;
+	background-color:  #A2B964;
+}
+.contet_area{
+	margin-top: 10pt;
+	font-weight: bold;
+}
+.talkbox{
+	overflow: hidden;
+	border: 2px solid gray;
+	font-weight: bold;
+	margin:20px;
+	padding: 8px;
+	border-radius: 10px;
+	background-color:  #E8DC9B;
+}
+.reviewbox{
+	padding: 10px;
+	font-size: 10px;
+
+}
+p q{
+	overflow: hidden;
+}
+#talkimg{
+	float: left;
+}
+.mainbox{
+	display: inline;
+}
