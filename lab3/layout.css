@@ -50,3 +50,6 @@ img.headericon{
 .overhidden{
 	overflow: hidden;
 }
+.floatLeft{
+	float: left;
+}
