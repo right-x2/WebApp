@@ -1,0 +1,82 @@
+body{
+	background-image: url(./background.png);
+	font-size: 8pt;
+	font-family: "Verdaba";
+}
+h1{
+	font-family: "Tahoma";
+	font-weight: bold;
+	font-size: 24pt;
+	text-shadow: 3px 3px #999999;
+	text-align: center;
+}
+h2{
+	float: left;
+	font-weight: bold;
+	color: red;
+	font-size: 48pt;
+	margin: auto;
+}
+dt{
+	font-weight: bold;
+	margin-top: 10pt;
+}
+a { text-decoration:none }
+.banner{
+	background-image: url(./bannerbg.png);
+	height: 50px;
+}
+.center{
+	display: block;
+	margin: auto;
+}
+.overallContent{
+	width: 800px;
+	border: 4px gray solid;
+	border-radius: 20px;
+	overflow: hidden; 
+}
+.overallLeft{
+	background-image: url(./rbg.png); 
+	vertical-align: bottom;
+	height: 83px;
+}
+.floRight{
+	float: right;
+	width: 250px;
+	background-color:  #A2B964;
+	font-size: 8pt;
+	overflow: hidden;
+
+}
+.floLeft{
+	float: left;
+}
+.reviewSection{
+	border-spacing: 2%;
+}
+.reviewSection > div{
+	float: left;
+	display: inline-block;
+	width: 47%;
+	font-size: 8pt;
+	font-weight: bold;
+	background-color: #E8DC9B;
+	border: 2px solid gray;
+	border-radius: 10px; 
+	margin: 20px;
+	overflow: hidden;
+}
+.reviewSection > p{
+	font-weight: bold;
+}
+p > img{
+	float: left;
+}
+.footer{
+	background-color: #A2B964;
+	padding: 5px;
+	text-align: center;
+	overflow: hidden;
+	clear: right;
+}
