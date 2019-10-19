@@ -46,13 +46,14 @@ a { text-decoration:none }
 	width: 250px;
 	background-color:  #A2B964;
 	font-size: 8pt;
-	overflow: hidden;
 
 }
 .floLeft{
 	float: left;
 }
 .reviewSection{
+	width: 550px;
+	display: inline-block;
 	border-spacing: 2%;
 }
 .reviewSection > div{
