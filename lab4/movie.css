@@ -53,19 +53,17 @@ a { text-decoration:none }
 }
 .reviewSection{
 	width: 550px;
-	display: inline-block;
-	border-spacing: 2%;
+	display: table;
+	border-collapse: collapse;
 }
-.reviewSection > div{
-	float: left;
-	display: inline-block;
-	width: 47%;
+.reviewBox{
+
+	
 	font-size: 8pt;
 	font-weight: bold;
 	background-color: #E8DC9B;
 	border: 2px solid gray;
 	border-radius: 10px; 
-	margin: 20px;
 	overflow: hidden;
 }
 .reviewSection > p{
@@ -80,4 +78,20 @@ p > img{
 	text-align: center;
 	overflow: hidden;
 	clear: right;
+}
+.reviewer{
+	padding-top: 5px;
+}
+.totalBox{
+	
+	display: inline-block;
+	width: 47%;
+	margin: 5px;
+	border-collapse: collapse;
+}
+.right{
+	float: right;
+}
+.abox{
+	width: 400px;
 }
