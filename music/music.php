@@ -10,8 +10,14 @@
 
 	<body>
 		<?php
+			$news_pages = $_GET["newspages"];
+			if ($news_pages==null)  $news_pages = 5;
 			$song_count = 1234;
 			$song_hour = $song_count/10;
+			$arr = array("Guns N' Roses", "Green Day", "Blink182", "The Cranberries","Bruno Mars", "Amy Winehouse","Jason Mraz");
+			var_dump($arr);
+			$path = glob("lab5/musicPHP/songs/*.mp3");
+			$m3u_path = glob("lab5/musicPHP/songs/*.m3u");
 		?>
 		<h1>My Music Page</h1>
 		
@@ -27,7 +33,7 @@
 		<div class="section">
 			<h2>Billboard News</h2>
 			<ol>
-			<?php for($i = 0; $i < 5; $i++)
+			<?php for($i = 0; $i < $news_pages ;$i++)
 			{?>
 				<?php $count = 11-$i; ?>
 				<li><a href="https://www.billboard.com/archive/article/2019<?=$count?>">2019-<?= $count ?></a>
@@ -38,12 +44,14 @@
 		<!-- Ex 5: Favorite Artists from a File (Files) -->
 		<div class="section">
 			<h2>My Favorite Artists</h2>
-		
 			<ol>
-				<li>Guns N' Roses</li>
-				<li>Green Day</li>
-				<li>Blink182</li>
-			</ol>
+				<?php foreach (file("favorite.txt") as $name) {
+  					$tokens = explode(" ", $name);
+  					?>
+  					<li><a href="https://en.wikipedia.org/wiki/<?= $tokens[0] ?>_<?= $tokens[1] ?>"><?=$name?>
+					</a>
+  					<?php
+				}?>
 		</div>
 		
 		<!-- Ex 6: Music (Multiple Files) -->
@@ -52,27 +60,25 @@
 			<h2>My Music and Playlists</h2>
 
 			<ul id="musiclist">
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/paradise-city.mp3">paradise-city.mp3</a>
-				</li>
-				
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/basket-case.mp3">basket-case.mp3</a>
-				</li>
-
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/all-the-small-things.mp3">all-the-small-things.mp3</a>
-				</li>
-
+				<?php foreach ($path as $filename) {?>
+	    			<li class="mp3item"><a href="<?=$filename?>"><?=basename($filename)?></a>   (<?=(int)(filesize($filename)/1024)?>KB)
+	    			<?php
+	    		}?>
 				<!-- Exercise 8: Playlists (Files) -->
-				<li class="playlistitem">326-13f-mix.m3u:
-					<ul>
-						<li>Basket Case.mp3</li>
-						<li>All the Small Things.mp3</li>
-						<li>Just the Way You Are.mp3</li>
-						<li>Pradise City.mp3</li>
-						<li>Dreams.mp3</li>
-					</ul>
+				<?php foreach ($m3u_path as $filename) {?>
+	    			<li class="playlistitem"><?=basename($filename)?>
+	    				<ul>
+			    			<?php foreach (file($filename) as $file_m3u) {?>
+			    				<?php if(basename($file_m3u)[0]!="#"){?>
+			    					<li><?=basename($file_m3u)?></li>
+			    				<?php
+			    				}?>
+			    			<?php
+			    			}?>
+			    		</ul>
+			    	</li>
+	    		<?php
+	    		}?>
 			</ul>
 		</div>
 
